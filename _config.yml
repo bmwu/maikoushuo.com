@@ -7,7 +7,7 @@ title: 麦口说
 subtitle: 初心易得, 始终难守
 description: 初心易得, 始终难守
 author: 麦口
-language:
+language: zh-Hans
 timezone:
 
 # URL
@@ -63,7 +63,8 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+# theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
