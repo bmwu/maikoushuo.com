@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------
 
 # Put your favicon.ico into `hexo-site/source/` directory.
-favicon: /favicon.ico
+favicon: /Michael_64_64.ico
 
 # Set default keywords (Use a comma to separate)
 keywords: "Hexo, NexT"
@@ -12,6 +12,13 @@ keywords: "Hexo, NexT"
 # Leave rss as empty to use site's feed link.
 # Set rss to specific value if you have burned your feed already.
 rss:
+
+feed:
+  type: rss2
+  path: rss2.xml
+  limit: 5
+  hub:
+  content: 'true'
 
 # Specify the date when the site was setup
 #since: 2015
@@ -90,8 +97,9 @@ scheme: Gemini
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
-  #LinkLabel: Link
+social:
+  Github: https://github.com/bmwu
+  Telegram: https://telegram.me/maikou/
 
 # Social Links Icons
 # Icon Mapping:
@@ -117,16 +125,17 @@ social_icons:
   Weibo: weibo
 
 # Blog rolls
-#links_title: Links
+links_title: Links
 #links_layout: block
 #links_layout: inline
-#links:
-  #Title: http://example.com/
+links:
+  左言右午的日常: http://www.zuoyanyouwu.com/
+  Mixjuice's Notes: http://attitude.mixjuice.me/
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-#avatar:
+avatar: /images/avatar.jpeg
 
 # Table Of Contents in the Sidebar
 toc:
