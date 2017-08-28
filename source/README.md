@@ -1,2 +1,0 @@
-# bmwu.github.io
-bmwu
