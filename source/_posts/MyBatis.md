@@ -1,9 +1,8 @@
 ---
 title: MyBatis
 date: 2017-08-23 11:09:43
-tags:
+tags: MyBatis
 ---
-
 
 #### [通用 MAPPER 3](https://mapperhelper.github.io/docs/)
 

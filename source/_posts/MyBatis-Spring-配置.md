@@ -1,7 +1,7 @@
 ---
 title: MyBatis-Spring 配置
 date: 2017-08-23 11:58:06
-tags:
+tags: MyBatis
 ---
 
 ##### SqlSessionFactoryBean 配置

@@ -1,7 +1,7 @@
 ---
 title: JAVA集合框架
 date: 2017-08-28 09:50:59
-tags:
+tags: JAVA集合框架
 ---
 
 ![image](https://github.com/bmwu/bmwu.github.io/blob/master/images/JAVA%E9%9B%86%E5%90%88%E5%9B%BE%E8%B0%B1.jpeg?raw=true)

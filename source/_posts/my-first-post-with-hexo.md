@@ -1,7 +1,7 @@
 ---
 title: my first post with hexo
 date: 2016-11-02 16:20:07
-tags:
+tags: Hexo
 ---
 
 This is my first post using hexo
