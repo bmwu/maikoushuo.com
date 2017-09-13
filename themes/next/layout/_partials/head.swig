@@ -2,6 +2,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="{{ theme.android_chrome_color }}">
+<meta name="domain_verify" content="pmrgi33nmfuw4ir2ejwwc2lln52xg2dvn4xgg33neiwcez3vnfsceorcmuzwembrgbrgmyzrgyydimbqgq4dozrygbrgmnlemq2ggnjxgi3selbcoruw2zktmf3gkir2ge2tanjqhe2tcnbug43te7i">
 
 
 {% if theme.pace %}
