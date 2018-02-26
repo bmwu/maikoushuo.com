@@ -1,7 +1,7 @@
 ---
 title: SQLite
 date: 2017-10-31 20:18:28
-tags: SQLite
+tags: SQLites
 ---
 
 SQLite是一种嵌入式数据库，它的数据库就是一个文件。由于SQLite本身是C写的，而且体积很小，所以，经常被集成到各种应用程序中，甚至在iOS和Android的App中都可以集成。
