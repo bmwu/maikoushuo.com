@@ -72,5 +72,7 @@ deploy:
   type: git
   repo: git@github.com:bmwu/bmwu.github.io.git
   branch: master
+  name: bmwu
+  email: bmwu.hz@gmail.com
   message: "{{ now('YYYY-MM-DD HH:mm:ss') }}"
 
