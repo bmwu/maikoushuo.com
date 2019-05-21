@@ -1,5 +1,5 @@
 ---
-title: my first post with hexo
+title: Hexo first post
 date: 2016-11-02 16:20:07
 tags: Hexo
 ---
