@@ -115,3 +115,10 @@ deploy:
 ** 解决方案：**
 当遇到 hexo g 生成的静态页面不正确时，或者没有扫描到正确的source包时，可能就是hexo的generator的插件没有安装，查看hexo插件的安装情况并安装即可。
 
+### 3 上传README.md
+
+** 解决方案：**
+修改Hexo目录下的_config.yml，将skip_render参数的值设置上。skip_render: README.md，保存退出即可。
+使用hexo d 命令就不会在渲染 README.md 这个文件了。
+
+
