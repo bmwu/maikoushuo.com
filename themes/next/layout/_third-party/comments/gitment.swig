@@ -4,6 +4,7 @@
     <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
     <script>
       var gitment = new Gitment({
+        id: '{{ page.title }}',
         owner: '{{ theme.gitment.github_id }}',
         repo: '{{ theme.gitment.repo }}',
         oauth: {
