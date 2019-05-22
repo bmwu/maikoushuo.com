@@ -84,6 +84,8 @@
 
 
 
+  
+
 
   <link rel="alternate" href="/atom.xml" title="麦口说" type="application/atom+xml">
 
@@ -105,7 +107,7 @@
 <meta property="og:site_name" content="麦口说">
 <meta property="og:description" content="gitment的介绍，直接 https://imsun.net/posts/gitment-introduction/我就简单描述下我遇到的问题 Gitment配置信息我使用的是next主题，_config.yml下面配置, 需要注意的是  owner是 https://github.com/bmwu 里面的bmwu repo是 https://github.com/bmwu/bmwu.githu">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-22T07:42:51.599Z">
+<meta property="og:updated_time" content="2019-05-22T07:45:26.209Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo-使用 GitHub Issues 搭建评论系统">
 <meta name="twitter:description" content="gitment的介绍，直接 https://imsun.net/posts/gitment-introduction/我就简单描述下我遇到的问题 Gitment配置信息我使用的是next主题，_config.yml下面配置, 需要注意的是  owner是 https://github.com/bmwu 里面的bmwu repo是 https://github.com/bmwu/bmwu.githu">
@@ -368,7 +370,7 @@
 </ol>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitment:</span></span><br><span class="line">  <span class="comment"># Switch</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Your Github ID (Github username):</span></span><br><span class="line"><span class="attr">  owner:</span></span><br><span class="line">  <span class="comment"># The repo to store comments:</span></span><br><span class="line"><span class="attr">  repo:</span> </span><br><span class="line">  <span class="comment"># Your client ID:</span></span><br><span class="line"><span class="attr">  client_id:</span> <span class="string">''</span></span><br><span class="line">  <span class="comment"># Your client secret:</span></span><br><span class="line"><span class="attr">  client_secret:</span> <span class="string">''</span></span><br></pre></td></tr></table></figure>
 <h3 id="gitment-swig"><a href="#gitment-swig" class="headerlink" title="gitment.swig"></a>gitment.swig</h3><p>直接上文件，需要注意的是id可以配置为 page.title；id不配置会报”validation error”；id设置为location.href，是强指定了，会出现所有文章都是相同的comments</p>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="keyword">if</span> theme.gitment.enable and theme.gitment.client_id and theme.gitment.client_secret %&#125;</span><br><span class="line">    &lt;div id=<span class="string">"container_gitment"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"https://imsun.github.io/gitment/style/default.css"</span>&gt;</span><br><span class="line">    &lt;script src=<span class="string">"https://imsun.github.io/gitment/dist/gitment.browser.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">      <span class="keyword">var</span> gitment = <span class="keyword">new</span> Gitment(&#123;</span><br><span class="line">        id: <span class="string">'&#123;&#123; page.title &#125;&#125;'</span>,</span><br><span class="line">        owner: <span class="string">'&#123;&#123; theme.gitment.github_id &#125;&#125;'</span>,</span><br><span class="line">        repo: <span class="string">'&#123;&#123; theme.gitment.repo &#125;&#125;'</span>,</span><br><span class="line">        oauth: &#123;</span><br><span class="line">          client_id: <span class="string">'&#123;&#123; theme.gitment.client_id &#125;&#125;'</span>,</span><br><span class="line">          client_secret: <span class="string">'&#123;&#123; theme.gitment.client_secret &#125;&#125;'</span>,</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      gitment.render(<span class="string">'container_gitment'</span>);</span><br><span class="line">    &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&#123;% endif %&#125;</span></span><br></pre></td></tr></table></figure>
 <h3 id="初始化评论"><a href="#初始化评论" class="headerlink" title="初始化评论"></a>初始化评论</h3><p>现在确实好像需要手动去初始化， 假如你id配置了page.title，当里面存在’或者/时，好像不会出现comments，所以title的命名需要注意下</p>
 
       
