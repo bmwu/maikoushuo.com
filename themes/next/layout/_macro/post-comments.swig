@@ -395,6 +395,8 @@
       {% if is_index and not isLast %}
         <div class="post-eof"></div>
       {% endif %}
+
+      {% include '../_third-party/comments/index.swig' %}
     </footer>
   </div>
   {######################}

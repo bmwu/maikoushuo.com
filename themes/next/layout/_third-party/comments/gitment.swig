@@ -4,7 +4,6 @@
     <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
     <script>
       var gitment = new Gitment({
-        id: 'location.href', // 可选。默认为 location.href
         owner: '{{ theme.gitment.github_id }}',
         repo: '{{ theme.gitment.repo }}',
         oauth: {
