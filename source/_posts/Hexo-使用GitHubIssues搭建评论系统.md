@@ -30,6 +30,7 @@ gitment:
 ### gitment.swig
 直接上文件，需要注意的是id可以配置为 page.title；id不配置会报"validation error"；id设置为location.href，是强指定了，会出现所有文章都是相同的comments
 
+```javascript
 {% if theme.gitment.enable and theme.gitment.client_id and theme.gitment.client_secret %}
     <div id="container_gitment"></div>
     <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
@@ -47,6 +48,7 @@ gitment:
       gitment.render('container_gitment');
     </script>
 {% endif %}
+```
 
 ### 初始化评论
 现在确实好像需要手动去初始化， 假如你id配置了page.title，当里面存在'或者/时，好像不会出现comments，所以title的命名需要注意下
