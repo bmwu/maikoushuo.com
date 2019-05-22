@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://bmwu.github.io/"/>
-  <updated>2019-05-22T03:44:42.896Z</updated>
+  <updated>2019-05-22T07:42:51.599Z</updated>
   <id>https://bmwu.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo-使用 GitHub Issues 搭建评论系统</title>
+    <link href="https://bmwu.github.io/2019/05/22/Hexo-%E4%BD%BF%E7%94%A8GitHubIssues%E6%90%AD%E5%BB%BA%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/"/>
+    <id>https://bmwu.github.io/2019/05/22/Hexo-使用GitHubIssues搭建评论系统/</id>
+    <published>2019-05-22T07:32:59.000Z</published>
+    <updated>2019-05-22T07:42:51.599Z</updated>
+    
+    <content type="html"><![CDATA[<p>gitment的介绍，直接 <a href="https://imsun.net/posts/gitment-introduction/" target="_blank" rel="noopener">https://imsun.net/posts/gitment-introduction/</a><br>我就简单描述下我遇到的问题</p><h3 id="Gitment配置信息"><a href="#Gitment配置信息" class="headerlink" title="Gitment配置信息"></a>Gitment配置信息</h3><p>我使用的是next主题，_config.yml下面配置, 需要注意的是</p><ol><li>owner是 <a href="https://github.com/bmwu" target="_blank" rel="noopener">https://github.com/bmwu</a> 里面的bmwu</li><li>repo是 <a href="https://github.com/bmwu/bmwu.github.io" target="_blank" rel="noopener">https://github.com/bmwu/bmwu.github.io</a> 里面的 bmwu.github.io</li><li>所有的变量都需要加 ‘’，不要comments加载不出来的</li></ol><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitment:</span></span><br><span class="line">  <span class="comment"># Switch</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Your Github ID (Github username):</span></span><br><span class="line"><span class="attr">  owner:</span></span><br><span class="line">  <span class="comment"># The repo to store comments:</span></span><br><span class="line"><span class="attr">  repo:</span> </span><br><span class="line">  <span class="comment"># Your client ID:</span></span><br><span class="line"><span class="attr">  client_id:</span> <span class="string">''</span></span><br><span class="line">  <span class="comment"># Your client secret:</span></span><br><span class="line"><span class="attr">  client_secret:</span> <span class="string">''</span></span><br></pre></td></tr></table></figure><h3 id="gitment-swig"><a href="#gitment-swig" class="headerlink" title="gitment.swig"></a>gitment.swig</h3><p>直接上文件，需要注意的是id可以配置为 page.title；id不配置会报”validation error”；id设置为location.href，是强指定了，会出现所有文章都是相同的comments</p><h3 id="初始化评论"><a href="#初始化评论" class="headerlink" title="初始化评论"></a>初始化评论</h3><p>现在确实好像需要手动去初始化， 假如你id配置了page.title，当里面存在’或者/时，好像不会出现comments，所以title的命名需要注意下</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;gitment的介绍，直接 &lt;a href=&quot;https://imsun.net/posts/gitment-introduction/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://imsun.net/posts/gitment-intr
+      
+    
+    </summary>
+    
+    
+      <category term="Hexo" scheme="https://bmwu.github.io/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>2018总结 - 为爱而生</title>
@@ -463,29 +486,6 @@
         &lt;p&gt;Spring Boot 内置Tomcat默认端口号为8080，在开发多个应用调试时很不方便.&lt;/p&gt;
 &lt;p&gt;下面介绍一种&lt;strong&gt;修改默认配置&lt;/strong&gt; 的方法:&lt;/p&gt;
 &lt;p&gt;Spring Boot默认配置文件为CLASSPATH下的application.
-      
-    
-    </summary>
-    
-    
-      <category term="Spring Boot" scheme="https://bmwu.github.io/tags/Spring-Boot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Spring Boot Unit Tesing</title>
-    <link href="https://bmwu.github.io/2017/09/14/Spring-Boot-Unit-Tesing/"/>
-    <id>https://bmwu.github.io/2017/09/14/Spring-Boot-Unit-Tesing/</id>
-    <published>2017-09-14T05:42:45.000Z</published>
-    <updated>2019-05-21T06:52:45.742Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h2><p>Spring Boot provides a number of utilities and annotations to help when testing your application. Test support is provided by two modules; <code>spring-boot-test</code>contains core items, and <code>spring-boot-test-autoconfigure</code> supports auto-configuration for tests.</p><p>Most developers will just use the <code>spring-boot-starter-test</code> ‘Starter’ which imports both Spring Boot test modules as well has JUnit, AssertJ, Hamcrest and a number of other useful libraries.</p><h2 id="Test-scope-dependencies"><a href="#Test-scope-dependencies" class="headerlink" title="Test scope dependencies"></a>Test scope dependencies</h2><p>If you use the <code>spring-boot-starter-test</code> ‘Starter’ (in the <code>test</code> <code>scope</code>), you will find the following provided libraries:</p><ul><li><a href="http://junit.org/" target="_blank" rel="noopener">JUnit</a> — The de-facto standard for unit testing Java applications.</li><li><a href="https://docs.spring.io/spring/docs/4.3.11.RELEASE/spring-framework-reference/htmlsingle/#integration-testing" target="_blank" rel="noopener">Spring Test</a> &amp; Spring Boot Test — Utilities and integration test support for Spring Boot applications.</li><li><a href="https://joel-costigliola.github.io/assertj/" target="_blank" rel="noopener">AssertJ</a> — A fluent assertion library.</li><li><a href="http://hamcrest.org/JavaHamcrest/" target="_blank" rel="noopener">Hamcrest</a> — A library of matcher objects (also known as constraints or predicates).</li><li><a href="http://mockito.org/" target="_blank" rel="noopener">Mockito</a> — A Java mocking framework.</li><li><a href="https://github.com/skyscreamer/JSONassert" target="_blank" rel="noopener">JSONassert</a> — An assertion library for JSON.</li><li><a href="https://github.com/jayway/JsonPath" target="_blank" rel="noopener">JsonPath</a> — XPath for JSON.</li></ul><p>These are common libraries that we generally find useful when writing tests. You are free to add additional test dependencies of your own if these don’t suit your needs.</p><h2 id="Unit-Testing-with-WebMvcTest"><a href="#Unit-Testing-with-WebMvcTest" class="headerlink" title="Unit Testing with @WebMvcTest"></a>Unit Testing with @WebMvcTest</h2><p>Our <em>Controller</em> depends on the <em>Service</em> layer; let’s only include a single method for simplicity:</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/api"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EmployeeRestController</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> EmployeeService employeeService;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@GetMapping</span>(<span class="string">"/employees"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Employee&gt; <span class="title">getAllEmployees</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> employeeService.getAllEmployees();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>Since we are only focused on the <em>Controller</em> code, it is natural to mock the <em>Service</em> layer code for our unit tests:</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RunWith</span>(SpringRunner.class)</span><br><span class="line"><span class="meta">@WebMvcTest</span>(EmployeeRestController.class)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EmployeeRestControllerTest</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> MockMvc mvc;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@MockBean</span></span><br><span class="line">    <span class="keyword">private</span> EmployeeService service;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// write test cases here</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>To test the <em>Controllers</em>, we can use <em>@WebMvcTest</em>. It will auto-configure the Spring MVC infrastructure for our unit tests.</p><p>In most of the cases, @<em>WebMvcTest</em> will be limited to bootstrap a single controller. It is used along with <em>@MockBean</em> to provide mock implementations for required dependencies.</p><p><em>@WebMvcTest</em> also auto-configures <em>MockMvc</em> which offers a powerful way of easy testing MVC controllers without starting a full HTTP server.</p><p>Having said that, let’s write our test case:</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">givenEmployees_whenGetEmployees_thenReturnJsonArray</span><span class="params">()</span></span></span><br><span class="line"><span class="function">  <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">     </span><br><span class="line">    Employee alex = <span class="keyword">new</span> Employee(<span class="string">"alex"</span>);</span><br><span class="line"> </span><br><span class="line">    List&lt;Employee&gt; allEmployees = Arrays.asList(alex);</span><br><span class="line"> </span><br><span class="line">    given(service.getAllEmployees()).willReturn(allEmployees);</span><br><span class="line"> </span><br><span class="line">    mvc.perform(get(<span class="string">"/api/employees"</span>)</span><br><span class="line">      .contentType(MediaType.APPLICATION_JSON))</span><br><span class="line">      .andExpect(status().isOk())</span><br><span class="line">      .andExpect(jsonPath(<span class="string">"$"</span>, hasSize(<span class="number">1</span>)))</span><br><span class="line">      .andExpect(jsonPath(<span class="string">"$[0].name"</span>, is(alex.getName())));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>The <em>get(…)</em> method call can be replaced by other methods corresponding to HTTP verbs like <em>put()</em>, <em>post()</em>, etc. Please note that we are also setting the content type in the request.</p><p><em>MockMvc</em> is flexible, and we can create any request using it.</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Testing&quot;&gt;&lt;a href=&quot;#Testing&quot; class=&quot;headerlink&quot; title=&quot;Testing&quot;&gt;&lt;/a&gt;Testing&lt;/h2&gt;&lt;p&gt;Spring Boot provides a number of utilities and ann
       
     
     </summary>
