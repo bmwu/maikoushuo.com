@@ -177,7 +177,7 @@ sidebar:
 
   # Scroll percent label in b2t button
   scrollpercent: false
-  
+
   # Enable sidebar on narrow view
   onmobile: false
 
@@ -331,6 +331,18 @@ han: false
 # Duoshuo ShortName
 #duoshuo_shortname:
 
+gitment:
+  # Switch
+  enable: true
+  # Your Github ID (Github username):
+  github_id: bmwu
+  # The repo to store comments:
+  repo: bmwu.github.io
+  # Your client ID:
+  client_id: '8809bf9a0be35d52044c'
+  # Your client secret:
+  client_secret: '7c6213a6c456fb4a87fc4817597febf55ca0aba8'
+
 # Disqus
 disqus:
   enable: false
@@ -346,8 +358,8 @@ changyan:
   appid:
   appkey:
 
-    
-# Valine. 
+
+# Valine.
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://github.com/xCss/Valine
 valine:
