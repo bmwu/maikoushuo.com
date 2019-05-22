@@ -1,6 +1,6 @@
 ---
 title: Spring Boot - Redis
-date: 2017-10-09 16:13:23
+date: 2017-09-14 13:42:44
 tags: Spring Boot
 ---
 

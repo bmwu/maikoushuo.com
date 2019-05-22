@@ -1,6 +1,6 @@
 ---
 title: Spring Boot @EnableScheduling and @Scheduled Job Example
-date: 2017-10-16 15:01:21
+date: 2017-09-14 13:42:43
 tags:
 ---
 
