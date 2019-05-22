@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://bmwu.github.io/"/>
-  <updated>2019-05-21T04:11:57.578Z</updated>
+  <updated>2019-05-22T03:44:42.896Z</updated>
   <id>https://bmwu.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2018总结 - 为爱而生</title>
+    <link href="https://bmwu.github.io/2019/05/22/2018%E6%80%BB%E7%BB%93/"/>
+    <id>https://bmwu.github.io/2019/05/22/2018总结/</id>
+    <published>2019-05-22T01:56:23.000Z</published>
+    <updated>2019-05-22T03:44:42.896Z</updated>
+    
+    <content type="html"><![CDATA[<p>18年早已过去，崭新的19年也已过了1/4，按照国际惯例，一年一度的总结过去计划未来的日子早就应该到来，如今却姗姗来迟。</p><p>18年和以往唯一不同的是，以前只是“怅然若失”的假装自己到了“而立之年”，而19年，真的是步入“而立之年”了，若说自己没有那么一丝的感伤和恐惧，那是自欺欺人，但既然“木已成舟”，也只能欣然接受了，而且这一天终究是要来的。这也可能是人年纪越大，越怕过年的原因之一吧。</p><p>工作的第8个年头，也就是32岁的时候，突然有了一种很强烈的危机感，这种危机感主要来源于年龄的增长，因为你会发现和你一起共事的同事们越来越年轻，当然这不是最要紧的，最要紧的是对工作他们可以投入更多的时间，而你不仅仅是公司的一名员工，所以在处理工作的方式和方法就需要更多的“智慧”，你必须要用更高的“能力”来弥补工作时长上的短板，就像计算机设计中，要用“空间”来换取“时间”的概念一样，所以这些危机感应该是和你的能力成反比的，而这一年为了“应付”这些危机感，加速和加强了我对软件编程的理解，但也因此牺牲了很多健身的时间也是比较遗憾的。</p><p>17年我离开LOCKet，选择来到Terminus；19年我离开Terminus，再次带着期望和问题去往一个新的环境。<br>这一年，很辛苦，数不清的加班，尝不尽的酸甜；这一年，因为有爱情、友情、亲情，为爱而活。</p><h3 id="18年计划"><a href="#18年计划" class="headerlink" title="18年计划"></a>18年计划</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">和家人一起去旅行</span><br><span class="line">和太太一起去旅行</span><br><span class="line">精读10本书并记录观后感 </span><br><span class="line">参加杭州马拉松</span><br><span class="line">给太太一个完美的婚礼</span><br><span class="line">学会一种乐器</span><br><span class="line">打卡五岳之一</span><br></pre></td></tr></table></figure><h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>这一年，我与她迈进了婚姻的殿堂。结婚那天，她当着所有人含泪道：我爱你。很高兴遇见你，一切来的都刚刚好，我会好好爱你，往后余生，请多多指教。</p><p>这一年，带着她去了仙本那。欠你的旅行总需要兑现的。卡帕莱岛那白净的沙滩、清可见底的海水、五彩缤纷的珊瑚礁、自在悠游的鱼群海龟，宛如梦境之地～</p><p>这一年，她学了无数的厨艺，做得了烘培，总能把我吃撑，体重也chengchengcheng的往上窜，也许有一种胖就叫幸福胖吧。</p><p>这一年，我们完成了家庭旅行，深圳/香港/澳门，走过了很多地方，看过了很多风景，带来了新的体验，辛苦了我的她。</p><p>这一年，她实现了诺言，带着我来到了日本关西，暴走3天，走遍京都/神户/奈良，还n进n出药妆店，东西塞满了箱子。</p><p>这一年，第一次去外省参加了婚礼，满满的祝福送给新人。顺道完成了”打卡五岳之一”的衡山，和见识了长沙的美食和人海。相较于衡阳，长沙还是一座比较友好的城市，不过以后估计不会在节假日出游了，各种瘫痪呀。</p><p>这一年，几乎都是八点班车，深夜十点而归，工作/杂事占据了大部分的精力，似乎离学习也渐行渐远。但再忙再累，只要看到她留的便条，都会泛起嘴角，18年，有你真好！</p><p>这一年，认识了”新零售”，接触了”供应链”，探索未知发现视界，满足了我的好奇心。非常多的矛盾和挑战，自己的能力也提升了不少。感谢各位的帮助和提携，和那么多个并肩作战的日夜。</p><p>这一年，我的blog停更了，更多的贡献在了lark，成长很多，不能共享出来与君共勉了。</p><p>这一年，学习了一些新技术，业务架构，技术架构，中间件，分布式，增加了大型分布式、高并发、高负载（大数据量）、高可用性系统设计开发经验。</p><p>这一年，深深的感受了单纯技术的无力感，所以转了型，从技术到产品，做一个会技术的产品，一个会武术的流氓。</p><h3 id="19年计划"><a href="#19年计划" class="headerlink" title="19年计划"></a>19年计划</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">平衡好工作与生活</span><br><span class="line">学会管理情绪</span><br><span class="line">每天运动，坚持10000步 </span><br><span class="line">学会理财，珍惜血汗钱</span><br><span class="line">和家人一起去旅行</span><br><span class="line">和太太一起去旅行</span><br><span class="line">坚持学习，坚持写BLOG</span><br><span class="line">多认识一些新朋友</span><br></pre></td></tr></table></figure><p>初心易得，始终难守，耐撕前行，何必慌张，送给每一个不辜负时间的人，愿我们的每一份努力都不负期望。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;18年早已过去，崭新的19年也已过了1/4，按照国际惯例，一年一度的总结过去计划未来的日子早就应该到来，如今却姗姗来迟。&lt;/p&gt;
+&lt;p&gt;18年和以往唯一不同的是，以前只是“怅然若失”的假装自己到了“而立之年”，而19年，真的是步入“而立之年”了，若说自己没有那么一丝的感伤和
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>mac-idea的terminal输入中文乱码问题</title>
@@ -464,29 +486,6 @@
       
       
         &lt;h2 id=&quot;Testing&quot;&gt;&lt;a href=&quot;#Testing&quot; class=&quot;headerlink&quot; title=&quot;Testing&quot;&gt;&lt;/a&gt;Testing&lt;/h2&gt;&lt;p&gt;Spring Boot provides a number of utilities and ann
-      
-    
-    </summary>
-    
-    
-      <category term="Spring Boot" scheme="https://bmwu.github.io/tags/Spring-Boot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Spring Boot - Redis</title>
-    <link href="https://bmwu.github.io/2017/09/14/Spring-Boot-Redis/"/>
-    <id>https://bmwu.github.io/2017/09/14/Spring-Boot-Redis/</id>
-    <published>2017-09-14T05:42:44.000Z</published>
-    <updated>2019-05-21T06:52:45.739Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://redis.io/" target="_blank" rel="noopener">Redis</a> is a cache, message broker and richly-featured key-value store. Spring Boot offers basic auto-configuration for the <a href="https://github.com/xetorthio/jedis/" target="_blank" rel="noopener">Jedis</a> client library and abstractions on top of it provided by <a href="https://github.com/spring-projects/spring-data-redis" target="_blank" rel="noopener">Spring Data Redis</a>. There is a <code>spring-boot-starter-data-redis</code> ‘Starter’ for collecting the dependencies in a convenient way.</p><p>搭建环境</p><p>​     本文假设已经安装完成了Redis服务，并成功运行。</p><p>​     创建maven项目，添加依赖的Jar，本文主要使用jedis</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-data-redis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure><p>配置文件application.proerties.: </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># REDIS (RedisProperties)</span><br><span class="line"># Redis数据库索引（默认为0）</span><br><span class="line">spring.redis.database=1</span><br><span class="line"># Redis服务器地址</span><br><span class="line">spring.redis.host=127.0.0.1</span><br><span class="line"># Redis服务器连接端口</span><br><span class="line">spring.redis.port=6379</span><br><span class="line"># Redis服务器连接密码（默认为空）</span><br><span class="line">spring.redis.password=</span><br></pre></td></tr></table></figure><p>You can inject an auto-configured <code>StringRedisTemplate</code> or vanilla <code>RedisTemplate</code> instance as you would any other Spring Bean. By default the instance will attempt to connect to a Redis server using <code>localhost:6379</code>:</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyBean</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> StringRedisTemplate template;</span><br><span class="line">  </span><br><span class="line"><span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> RedisTemplate redisTemplate;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyBean</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// get</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> Object <span class="title">get</span><span class="params">(String key)</span> </span>&#123;</span><br><span class="line"><span class="keyword">return</span> redisTemplate.opsForValue().get(key);</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// set</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">set</span><span class="params">(String key, Object value)</span> </span>&#123;</span><br><span class="line">        redisTemplate.opsForValue().set(key, value);</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    <span class="comment">// getStringRedisTemplate</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> Object <span class="title">getStringRedisTemplate</span><span class="params">(String key)</span> </span>&#123;</span><br><span class="line"><span class="keyword">return</span> template.opsForValue().get(key);</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// setStringRedisTemplate</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setStringRedisTemplate</span><span class="params">(String key, Object value)</span> </span>&#123;</span><br><span class="line">        template.opsForValue().set(key, value);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;http://redis.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Redis&lt;/a&gt; is a cache, message broker and richly-featured key-value store. Sprin
       
     
     </summary>
