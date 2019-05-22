@@ -100,7 +100,7 @@
 <meta name="description" content="初心易得, 始终难守">
 <meta property="og:type" content="website">
 <meta property="og:title" content="麦口说">
-<meta property="og:url" content="https://bmwu.github.io/tags/java/index.html">
+<meta property="og:url" content="https://bmwu.github.io/tags/Java/index.html">
 <meta property="og:site_name" content="麦口说">
 <meta property="og:description" content="初心易得, 始终难守">
 <meta property="og:locale" content="zh-Hans">
@@ -136,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="https://bmwu.github.io/tags/java/">
+  <link rel="canonical" href="https://bmwu.github.io/tags/Java/">
 
 
 
 
 
-  <title>标签: java | 麦口说</title>
+  <title>标签: Java | 麦口说</title>
   
 
 
@@ -272,7 +272,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>java<small>标签</small>
+        <h1>Java<small>标签</small>
         </h1>
       </div>
 
@@ -284,17 +284,43 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2017/09/14/JAVA后台运行/" itemprop="url">
+            <a class="post-title-link" href="/2017/10/17/JAVA-从一个-NullPointerException-探究自动装箱拆箱机制/" itemprop="url">
               
-                <span itemprop="name">JAVA后台运行</span>
+                <span itemprop="name">JAVA 从一个 NullPointerException 探究自动装箱拆箱机制</span>
               
             </a>
         
       </h2>
 
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2017-09-14T11:43:05+08:00" content="2017-09-14">
-          09-14
+        <time class="post-time" itemprop="dateCreated" datetime="2017-10-17T15:46:39+08:00" content="2017-10-17">
+          10-17
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2017/10/13/Exception-in-thread-main-java-lang-IllegalArgumentException-bound-must-be-greater-than-origin/" itemprop="url">
+              
+                <span itemprop="name">Exception in thread main java.lang.IllegalArgumentException: bound must be greater than origin</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2017-10-13T20:17:59+08:00" content="2017-10-13">
+          10-13
         </time>
       </div>
 
@@ -624,7 +650,6 @@
     <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
     <script>
       var gitment = new Gitment({
-        id: 'location.href', // 可选。默认为 location.href
         owner: 'bmwu',
         repo: 'bmwu.github.io',
         oauth: {
@@ -722,49 +747,6 @@
             /* End Set ACL */
             newcounter.set("title", title);
             newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-</body>
-</html>
-l", url);
             newcounter.set("time", 1);
             newcounter.save(null, {
               success: function(newcounter) {

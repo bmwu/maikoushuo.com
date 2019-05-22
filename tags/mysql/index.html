@@ -624,7 +624,6 @@
     <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
     <script>
       var gitment = new Gitment({
-        id: 'location.href', // 可选。默认为 location.href
         owner: 'bmwu',
         repo: 'bmwu.github.io',
         oauth: {
@@ -745,6 +744,26 @@
       if ($('.leancloud_visitors').length == 1) {
         addCount(Counter);
       } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+{
         showTime(Counter);
       }
     });
