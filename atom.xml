@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://bmwu.github.io/"/>
-  <updated>2019-05-22T07:45:26.209Z</updated>
+  <updated>2019-05-23T07:28:35.949Z</updated>
   <id>https://bmwu.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JAVA JAVA_HOME</title>
+    <link href="https://bmwu.github.io/2019/05/23/JAVA-JAVA-HOME/"/>
+    <id>https://bmwu.github.io/2019/05/23/JAVA-JAVA-HOME/</id>
+    <published>2019-05-23T07:13:11.000Z</published>
+    <updated>2019-05-23T07:28:35.949Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="查看JAVA版本"><a href="#查看JAVA版本" class="headerlink" title="查看JAVA版本"></a>查看JAVA版本</h3><p>打开Mac电脑，查看JAVA版本，打开终端Terminal，通过命令行查看java版本：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> java -version</span></span><br><span class="line">java version "1.8.0_60"</span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_60-b27)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.60-b23, mixed mode)</span><br></pre></td></tr></table></figure><p>发现已安装Java运行环境。如果你的系统已经安装成功JDK，通过java -version就可以看到相应的jdk版本。如果你的电脑还没有安装JDK的话，可以到Oracle官网下载jdk。</p><h3 id="查看JAVA安装路径"><a href="#查看JAVA安装路径" class="headerlink" title="查看JAVA安装路径"></a>查看JAVA安装路径</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">which</span> java</span></span><br><span class="line">/usr/bin/java</span><br><span class="line"><span class="meta">$</span><span class="bash"> whereis java</span></span><br><span class="line">/usr/bin/java</span><br></pre></td></tr></table></figure><p>通过<code>ls -l  /usr/bin/java</code> 不能找到真实的安装路径</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Many Java applications need to know the location of a $JAVA_HOME directory. The $JAVA_HOME on Mac OS X should be found using the /usr/libexec/java_home command line tool on Mac OS X 10.5 or later. On older Mac OS X versions where the tool does not exist, use the fixed path &quot;/Library/Java/Home&quot;. The /usr/libexec/java_home tool dynamically finds the top Java version specified in Java Preferences for the current user. This path allows access to the bin subdirectory where command line tools such as java, javac, etc. exist as on other platforms. The tool /usr/libexec/java_home allows you to specify a particular CPU architecture and Java platform version when locating a $JAVA_HOME.</span><br><span class="line">Another advantage of dynamically finding this path, as opposed to hardcoding the fixed endpoint, is that it is updated when a new version of Java is downloaded via Software Update or installed with a newer version of Mac OS X. For this reason, it is important that developers do not install files in the JDKs inside of /System, since the changes will be lost with subsequent updates by newer versions of Java.</span><br><span class="line">To obtain the path to the currently executing $JAVA_HOME, use the java.home System property.</span><br></pre></td></tr></table></figure><p>参照苹果的文件文档说明<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ /usr/libexec/java_home -V</span><br><span class="line">Matching Java Virtual Machines (1):</span><br><span class="line">    1.8.0_60, x86_64:<span class="string">"Java SE 8"</span>/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home</span><br><span class="line"></span><br><span class="line">/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home</span><br></pre></td></tr></table></figure></p><h3 id="设置JAVA-HOME环境变量"><a href="#设置JAVA-HOME环境变量" class="headerlink" title="设置JAVA_HOME环境变量"></a>设置JAVA_HOME环境变量</h3><p>cd回到用户目录，再列出当前的所有文件，可以见到当前系统的.开头的所有文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ vi .bash_profile</span><br><span class="line">export JAVA_HOME=$(/usr/libexec/java_home)</span><br><span class="line">export PATH=$JAVA_HOME/bin:$PATH</span><br><span class="line">export CLASS_PATH=$JAVA_HOME/lib</span><br><span class="line">$ source .bash_profile</span><br></pre></td></tr></table></figure></p><p>到这个步骤，我们就已经配置好了全局的java的path和classpath环境变量。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">echo</span> <span class="variable">$JAVA_HOME</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">echo</span> <span class="variable">$PATH</span></span></span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;查看JAVA版本&quot;&gt;&lt;a href=&quot;#查看JAVA版本&quot; class=&quot;headerlink&quot; title=&quot;查看JAVA版本&quot;&gt;&lt;/a&gt;查看JAVA版本&lt;/h3&gt;&lt;p&gt;打开Mac电脑，查看JAVA版本，打开终端Terminal，通过命令行查看java版本：&lt;/
+      
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://bmwu.github.io/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo-使用 GitHub Issues 搭建评论系统</title>
@@ -461,31 +484,6 @@
         &lt;h3 id=&quot;配置&quot;&gt;&lt;a href=&quot;#配置&quot; class=&quot;headerlink&quot; title=&quot;配置&quot;&gt;&lt;/a&gt;配置&lt;/h3&gt;&lt;p&gt;大致说下流程，&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;首先我们自定义一个自己的异常类CustomException，继承RuntimeException
-      
-    
-    </summary>
-    
-    
-      <category term="Spring Boot" scheme="https://bmwu.github.io/tags/Spring-Boot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Spring Boot修改内置Tomcat端口号</title>
-    <link href="https://bmwu.github.io/2017/09/14/Spring-Boot-%E4%BF%AE%E6%94%B9%E5%86%85%E7%BD%AETomcat%E7%AB%AF%E5%8F%A3%E5%8F%B7/"/>
-    <id>https://bmwu.github.io/2017/09/14/Spring-Boot-修改内置Tomcat端口号/</id>
-    <published>2017-09-14T05:42:46.000Z</published>
-    <updated>2019-05-21T06:52:45.750Z</updated>
-    
-    <content type="html"><![CDATA[<p>Spring Boot 内置Tomcat默认端口号为8080，在开发多个应用调试时很不方便.</p><p>下面介绍一种<strong>修改默认配置</strong> 的方法:</p><p>Spring Boot默认配置文件为CLASSPATH下的application.properties</p><p>在application.properties中添加server.port=8081，可将tomcat默认端口号修改为8081</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Spring Boot 内置Tomcat默认端口号为8080，在开发多个应用调试时很不方便.&lt;/p&gt;
-&lt;p&gt;下面介绍一种&lt;strong&gt;修改默认配置&lt;/strong&gt; 的方法:&lt;/p&gt;
-&lt;p&gt;Spring Boot默认配置文件为CLASSPATH下的application.
       
     
     </summary>
