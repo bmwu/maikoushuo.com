@@ -1,7 +1,7 @@
 ---
 title: JAVA集合框架之Map
 date: 2017-08-29 23:16:56
-tags: JAVA集合框架
+tags: Java
 ---
 
 ![image](https://github.com/bmwu/bmwu.github.io/blob/master/images/JAVA%E9%9B%86%E5%90%88%E5%9B%BE%E8%B0%B1-Map.png?raw=true)
