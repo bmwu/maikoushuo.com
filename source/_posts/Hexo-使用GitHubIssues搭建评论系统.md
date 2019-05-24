@@ -52,3 +52,14 @@ gitment:
 
 ### 初始化评论
 现在确实好像需要手动去初始化， 假如你id配置了page.title，当里面存在'或者/时，好像不会出现comments，所以title的命名需要注意下
+
+
+### [object ProgressEvent]
+https://github.com/imsun/gitment/issues/170
+作者提供给使用者的加 CORS header 的服务已经停了，如果想继续使用我们就得自己搭一个这样的服务；
+单纯把"https://gh-oauth.imsun.net"改为请求 github 认证的接口'https://github.com/login/oauth/access_token'是不行的，存在跨域问题，比较懒，直接用的@jjeejj的
+```text
+修改文件themes\next\layout_third-party\comments\gitment.swig：
+https://imsun.github.io/gitment/style/default.css 修改为 https://www.wenjunjiang.win/css/gitment.css
+https://imsun.github.io/gitment/dist/gitment.browser.js 修改为 https://www.wenjunjiang.win/js/gitment.js
+```
