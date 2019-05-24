@@ -35,7 +35,7 @@ To obtain the path to the currently executing $JAVA_HOME, use the java.home S
 ```
 
 参照苹果的文件文档说明
-```sh
+```shell
 $ /usr/libexec/java_home -V
 Matching Java Virtual Machines (1):
     1.8.0_60, x86_64:	"Java SE 8"	/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
@@ -46,7 +46,7 @@ Matching Java Virtual Machines (1):
 ### 设置JAVA_HOME环境变量
 
 cd回到用户目录，再列出当前的所有文件，可以见到当前系统的.开头的所有文件。
-```
+```shell
 $ vi .bash_profile
 export JAVA_HOME=$(/usr/libexec/java_home)
 export PATH=$JAVA_HOME/bin:$PATH
