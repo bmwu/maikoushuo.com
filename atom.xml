@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://bmwu.github.io/"/>
-  <updated>2019-05-24T02:41:59.779Z</updated>
+  <updated>2019-05-24T03:18:40.440Z</updated>
   <id>https://bmwu.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>当浓缩接触到冰水，如此迷人</title>
+    <link href="https://bmwu.github.io/2019/05/24/%E5%BD%93%E6%B5%93%E7%BC%A9%E6%8E%A5%E8%A7%A6%E5%88%B0%E5%86%B0%E6%B0%B4%EF%BC%8C%E5%A6%82%E6%AD%A4%E8%BF%B7%E4%BA%BA/"/>
+    <id>https://bmwu.github.io/2019/05/24/当浓缩接触到冰水，如此迷人/</id>
+    <published>2019-05-24T02:52:51.000Z</published>
+    <updated>2019-05-24T03:18:40.440Z</updated>
+    
+    <content type="html"><![CDATA[<p>平时不怎么喝咖啡，如果喝那肯定就是美式了，那是简单即美味，萃取经典浓缩咖啡，以水调和，香气浓郁蔓溢。</p><p>热美式冷了会变酸，温度的改变会影响咖啡的酸度，所以在炎炎夏日，想来一杯沁凉畅快的冰美式。<br>冰美式没有热美式那么多花哨的名字，区别就在于冰的多少。</p><p>冰美式 Americano<br><img src="https://github.com/bmwu/bmwu.github.io/blob/master/images/iced-coffee-vs-americano-00-hero.jpg?raw=true" alt="image"></p><p>冰美式不同于热美式，不那么苦；而且浓缩加到杯子里只跟水混合，所以随着时间会慢慢的变淡。没想到当浓缩咖啡接触到冰水，竟然如此迷人。</p><p><img src="https://github.com/bmwu/bmwu.github.io/blob/master/images/americano-01.jpeg?raw=true" alt="image"></p><p>还有一种更“冷酷”的方式：在杯子里加满冰块，然后直接把炽热的浓缩咖啡液浇在冰块上。当冰块慢慢融化，咖啡味道也随之由浓转淡，呈现出更多细致的风味<br><img src="https://github.com/bmwu/bmwu.github.io/blob/master/images/americano.jpeg?raw=true" alt="image"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;平时不怎么喝咖啡，如果喝那肯定就是美式了，那是简单即美味，萃取经典浓缩咖啡，以水调和，香气浓郁蔓溢。&lt;/p&gt;
+&lt;p&gt;热美式冷了会变酸，温度的改变会影响咖啡的酸度，所以在炎炎夏日，想来一杯沁凉畅快的冰美式。&lt;br&gt;冰美式没有热美式那么多花哨的名字，区别就在于冰的多少。&lt;/p&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="https://bmwu.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>Maven-构建生命周期</title>
@@ -115,7 +139,7 @@
     <published>2019-05-22T07:32:59.000Z</published>
     <updated>2019-05-22T07:45:26.209Z</updated>
     
-    <content type="html"><![CDATA[<p>gitment的介绍，直接 <a href="https://imsun.net/posts/gitment-introduction/" target="_blank" rel="noopener">https://imsun.net/posts/gitment-introduction/</a><br>我就简单描述下我遇到的问题</p><h3 id="Gitment配置信息"><a href="#Gitment配置信息" class="headerlink" title="Gitment配置信息"></a>Gitment配置信息</h3><p>我使用的是next主题，_config.yml下面配置, 需要注意的是</p><ol><li>owner是 <a href="https://github.com/bmwu" target="_blank" rel="noopener">https://github.com/bmwu</a> 里面的bmwu</li><li>repo是 <a href="https://github.com/bmwu/bmwu.github.io" target="_blank" rel="noopener">https://github.com/bmwu/bmwu.github.io</a> 里面的 bmwu.github.io</li><li>所有的变量都需要加 ‘’，不要comments加载不出来的</li></ol><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitment:</span></span><br><span class="line">  <span class="comment"># Switch</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Your Github ID (Github username):</span></span><br><span class="line"><span class="attr">  owner:</span></span><br><span class="line">  <span class="comment"># The repo to store comments:</span></span><br><span class="line"><span class="attr">  repo:</span> </span><br><span class="line">  <span class="comment"># Your client ID:</span></span><br><span class="line"><span class="attr">  client_id:</span> <span class="string">''</span></span><br><span class="line">  <span class="comment"># Your client secret:</span></span><br><span class="line"><span class="attr">  client_secret:</span> <span class="string">''</span></span><br></pre></td></tr></table></figure><h3 id="gitment-swig"><a href="#gitment-swig" class="headerlink" title="gitment.swig"></a>gitment.swig</h3><p>直接上文件，需要注意的是id可以配置为 page.title；id不配置会报”validation error”；id设置为location.href，是强指定了，会出现所有文章都是相同的comments</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="keyword">if</span> theme.gitment.enable and theme.gitment.client_id and theme.gitment.client_secret %&#125;</span><br><span class="line">    &lt;div id=<span class="string">"container_gitment"</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"https://imsun.github.io/gitment/style/default.css"</span>&gt;</span><br><span class="line">    &lt;script src=<span class="string">"https://imsun.github.io/gitment/dist/gitment.browser.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">      <span class="keyword">var</span> gitment = <span class="keyword">new</span> Gitment(&#123;</span><br><span class="line">        id: <span class="string">'&#123;&#123; page.title &#125;&#125;'</span>,</span><br><span class="line">        owner: <span class="string">'&#123;&#123; theme.gitment.github_id &#125;&#125;'</span>,</span><br><span class="line">        repo: <span class="string">'&#123;&#123; theme.gitment.repo &#125;&#125;'</span>,</span><br><span class="line">        oauth: &#123;</span><br><span class="line">          client_id: <span class="string">'&#123;&#123; theme.gitment.client_id &#125;&#125;'</span>,</span><br><span class="line">          client_secret: <span class="string">'&#123;&#123; theme.gitment.client_secret &#125;&#125;'</span>,</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      gitment.render(<span class="string">'container_gitment'</span>);</span><br><span class="line">    &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&#123;% endif %&#125;</span></span><br></pre></td></tr></table></figure><h3 id="初始化评论"><a href="#初始化评论" class="headerlink" title="初始化评论"></a>初始化评论</h3><p>现在确实好像需要手动去初始化， 假如你id配置了page.title，当里面存在’或者/时，好像不会出现comments，所以title的命名需要注意下</p>]]></content>
+    <content type="html"><![CDATA[<p>gitment的介绍，直接 <a href="https://imsun.net/posts/gitment-introduction/" target="_blank" rel="noopener">https://imsun.net/posts/gitment-introduction/</a><br>我就简单描述下我遇到的问题</p><h3 id="Gitment配置信息"><a href="#Gitment配置信息" class="headerlink" title="Gitment配置信息"></a>Gitment配置信息</h3><p>我使用的是next主题，_config.yml下面配置, 需要注意的是</p><ol><li>owner是 <a href="https://github.com/bmwu" target="_blank" rel="noopener">https://github.com/bmwu</a> 里面的bmwu</li><li>repo是 <a href="https://github.com/bmwu/bmwu.github.io" target="_blank" rel="noopener">https://github.com/bmwu/bmwu.github.io</a> 里面的 bmwu.github.io</li><li>所有的变量都需要加 ‘’，不要comments加载不出来的</li></ol><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitment:</span></span><br><span class="line">  <span class="comment"># Switch</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Your Github ID (Github username):</span></span><br><span class="line"><span class="attr">  owner:</span></span><br><span class="line">  <span class="comment"># The repo to store comments:</span></span><br><span class="line"><span class="attr">  repo:</span> </span><br><span class="line">  <span class="comment"># Your client ID:</span></span><br><span class="line"><span class="attr">  client_id:</span> <span class="string">''</span></span><br><span class="line">  <span class="comment"># Your client secret:</span></span><br><span class="line"><span class="attr">  client_secret:</span> <span class="string">''</span></span><br></pre></td></tr></table></figure><h3 id="gitment-swig"><a href="#gitment-swig" class="headerlink" title="gitment.swig"></a>gitment.swig</h3><p>直接上文件，需要注意的是id可以配置为 page.title；id不配置会报”validation error”；id设置为location.href，是强指定了，会出现所有文章都是相同的comments</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="keyword">if</span> theme.gitment.enable and theme.gitment.client_id and theme.gitment.client_secret %&#125;</span><br><span class="line">    &lt;div id=<span class="string">"container_gitment"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    &lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"https://imsun.github.io/gitment/style/default.css"</span>&gt;</span><br><span class="line">    &lt;script src=<span class="string">"https://imsun.github.io/gitment/dist/gitment.browser.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">    &lt;script&gt;</span><br><span class="line">      <span class="keyword">var</span> gitment = <span class="keyword">new</span> Gitment(&#123;</span><br><span class="line">        id: <span class="string">'&#123;&#123; page.title &#125;&#125;'</span>,</span><br><span class="line">        owner: <span class="string">'&#123;&#123; theme.gitment.github_id &#125;&#125;'</span>,</span><br><span class="line">        repo: <span class="string">'&#123;&#123; theme.gitment.repo &#125;&#125;'</span>,</span><br><span class="line">        oauth: &#123;</span><br><span class="line">          client_id: <span class="string">'&#123;&#123; theme.gitment.client_id &#125;&#125;'</span>,</span><br><span class="line">          client_secret: <span class="string">'&#123;&#123; theme.gitment.client_secret &#125;&#125;'</span>,</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      gitment.render(<span class="string">'container_gitment'</span>);</span><br><span class="line">    &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&#123;% endif %&#125;</span></span><br></pre></td></tr></table></figure><h3 id="初始化评论"><a href="#初始化评论" class="headerlink" title="初始化评论"></a>初始化评论</h3><p>现在确实好像需要手动去初始化， 假如你id配置了page.title，当里面存在’或者/时，好像不会出现comments，所以title的命名需要注意下</p>]]></content>
     
     <summary type="html">
     
@@ -464,29 +488,6 @@
     
     
       <category term="Http" scheme="https://bmwu.github.io/tags/Http/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IAAS, SAAS, PAAS</title>
-    <link href="https://bmwu.github.io/2017/09/18/IAAS-SAAS-PAAS/"/>
-    <id>https://bmwu.github.io/2017/09/18/IAAS-SAAS-PAAS/</id>
-    <published>2017-09-18T02:37:37.000Z</published>
-    <updated>2019-05-21T04:11:57.574Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>原文</strong>是<strong>Pizza‐as‐a‐Service: a detailed view</strong>，用来类比Cloud Service Models。出处来自于Data Sovereignty and the Cloud – A Board and Executive Officers Guide University of NSW Faculty of Law, July 2013。</p><p>来源地址：<a href="http://www.chinacloud.cn/show.aspx?id=19758&amp;cid=18" target="_blank" rel="noopener">如何理解云计算？很简单，就像吃货想吃披萨了…</a></p><p>云计算的三个分层，基础设施在最下端，平台在中间，软件在顶端，分别是分别是<strong>Infrastructure-as-a-Service(IaaS)</strong>，<strong>Platform-as-a-Service(PaaS)</strong>，<strong>Software-as-a-Service(SaaS)</strong>，别的一些“软”的层可以在这些层上面添加.<br>而你的公司什么都有，现在所处的状态叫本地部署<strong>(On-Premises)</strong>，就像在自己家做pizza一样。<br><img src="http://maikoushuo.oss-cn-beijing.aliyuncs.com/%E4%BA%91%E8%AE%A1%E7%AE%97.png" alt="image"></p><p>几年前如果你想在办公室或者公司的网站上运行一些企业应用，你需要去买服务器，或者别的高昂的硬件来控制本地应用，让你的业务运行起来，这就叫本地部署。<br>假如你家BOSS突然有一天想明白了，只是为了吃上pizza，为什么非要自己做呢?于是，准备考虑一家云服务供应商，这个云服务供应商能提供哪些服务呢?其所能提供的云服务也就是云计算的三个分层：IaaS、PaaS和SaaS，就像pizza店提供三种服务：买成品回家做、外卖和到披萨店吃。<br><img src="http://maikoushuo.oss-cn-beijing.aliyuncs.com/%E4%BA%91%E8%AE%A1%E7%AE%971.png" alt="image"></p><h2 id="现在我们来谈谈具体细节。"><a href="#现在我们来谈谈具体细节。" class="headerlink" title="现在我们来谈谈具体细节。"></a>现在我们来谈谈具体细节。</h2><h3 id="IaaS-Infrastructure-as-a-Service-基础设施即服务"><a href="#IaaS-Infrastructure-as-a-Service-基础设施即服务" class="headerlink" title="IaaS: Infrastructure-as-a-Service(基础设施即服务)"></a>IaaS: Infrastructure-as-a-Service(基础设施即服务)</h3><p>有了IaaS，你可以将硬件外包到别的地方去。IaaS公司会提供场外服务器，存储和网络硬件，你可以租用。节省了维护成本和办公场地，公司可以在任何时候利用这些硬件来运行其应用。一些大的IaaS公司包括Amazon, Microsoft, VMWare, Rackspace和Red Hat.不过这些公司又都有自己的专长，比如Amazon和微软给你提供的不只是IaaS，他们还会将其计算能力出租给你来host你的网站。</p><h3 id="PaaS-Platform-as-a-Service-平台即服务"><a href="#PaaS-Platform-as-a-Service-平台即服务" class="headerlink" title="PaaS: Platform-as-a-Service(平台即服务)"></a>PaaS: Platform-as-a-Service(平台即服务)</h3><p>第二层就是所谓的PaaS，某些时候也叫做中间件。你公司所有的开发都可以在这一层进行，节省了时间和资源。PaaS公司在网上提供各种开发和分发应用的解决方案，比如虚拟服务器和操作系统。这节省了你在硬件上的费用，也让分散的工作室之间的合作变得更加容易。网页应用管理，应用设计，应用虚拟主机，存储，安全以及应用开发协作工具等。一些大的PaaS提供者有Google App Engine,Microsoft Azure，Force.com,Heroku，Engine Yard。最近兴起的公司有AppFog,Mendix和Standing Cloud.</p><h3 id="SaaS-Software-as-a-Service-软件即服务"><a href="#SaaS-Software-as-a-Service-软件即服务" class="headerlink" title="SaaS: Software-as-a-Service(软件即服务)"></a>SaaS: Software-as-a-Service(软件即服务)</h3><p>第三层也就是所谓SaaS。这一层是和你的生活每天接触的一层，大多是通过网页浏览器来接入。任何一个远程服务器上的应用都可以通过网络来运行，就是SaaS了。你消费的服务完全是从网页如Netflix,MOG,Google Apps,Box.net,Dropbox或者苹果的iCloud那里进入这些分类。尽管这些网页服务是用作商务和娱乐或者两者都有，但这也算是云技术的一部分。一些用作商务的SaaS应用包括Citrix的Go To Meeting，Cisco的WebEx，Salesforce的CRM，ADP，Workday和SuccessFactors。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;strong&gt;原文&lt;/strong&gt;是&lt;strong&gt;Pizza‐as‐a‐Service: a detailed view&lt;/strong&gt;，用来类比Cloud Service Models。出处来自于Data Sovereignty and the Cloud – A
-      
-    
-    </summary>
-    
-    
-      <category term="云计算" scheme="https://bmwu.github.io/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
     
   </entry>
   
