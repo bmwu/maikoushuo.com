@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+<meta name="domain_verify" content="pmrgi33nmfuw4ir2ejwwc2lln52xg2dvn4xgg33neiwcez3vnfsceorcmuzwembrgbrgmyzrgyydimbqgq4dozrygbrgmnlemq2ggnjxgi3selbcoruw2zktmf3gkir2ge2tanjqhe2tcnbug43te7i">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="Maven,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="麦口说" type="application/atom+xml">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/Michael_64_64.ico?v=5.1.2">
+
+
+
+
+
+
+<meta name="description" content="Maven 构建生命周期Maven 构建生命周期定义了一个项目构建跟发布的过程。 一个典型的 Maven 构建（build）生命周期是由以下几个阶段的序列组成的： ![image](https://github.com/bmwu/bmwu.github.io/blob/master/images/Maven-life .png?raw=true)    阶段 处理 描述     验证 valida">
+<meta name="keywords" content="Maven">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Maven-构建生命周期">
+<meta property="og:url" content="https://bmwu.github.io/2019/05/24/Maven-构建生命周期/index.html">
+<meta property="og:site_name" content="麦口说">
+<meta property="og:description" content="Maven 构建生命周期Maven 构建生命周期定义了一个项目构建跟发布的过程。 一个典型的 Maven 构建（build）生命周期是由以下几个阶段的序列组成的： ![image](https://github.com/bmwu/bmwu.github.io/blob/master/images/Maven-life .png?raw=true)    阶段 处理 描述     验证 valida">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-05-24T02:38:53.783Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Maven-构建生命周期">
+<meta name="twitter:description" content="Maven 构建生命周期Maven 构建生命周期定义了一个项目构建跟发布的过程。 一个典型的 Maven 构建（build）生命周期是由以下几个阶段的序列组成的： ![image](https://github.com/bmwu/bmwu.github.io/blob/master/images/Maven-life .png?raw=true)    阶段 处理 描述     验证 valida">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://bmwu.github.io/2019/05/24/Maven-构建生命周期/">
+
+
+
+
+
+  <title>Maven-构建生命周期 | 麦口说</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">麦口说</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">初心易得, 始终难守</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://bmwu.github.io/2019/05/24/Maven-构建生命周期/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="麦口">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="麦口说">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Maven-构建生命周期</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-24T10:35:44+08:00">
+                2019-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/05/24/Maven-构建生命周期/" class="leancloud_visitors" data-flag-title="Maven-构建生命周期">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Maven-构建生命周期"><a href="#Maven-构建生命周期" class="headerlink" title="Maven 构建生命周期"></a>Maven 构建生命周期</h1><p>Maven 构建生命周期定义了一个项目构建跟发布的过程。</p>
+<p>一个典型的 Maven 构建（build）生命周期是由以下几个阶段的序列组成的：</p>
+<p>![image](<a href="https://github.com/bmwu/bmwu.github.io/blob/master/images/Maven-life" target="_blank" rel="noopener">https://github.com/bmwu/bmwu.github.io/blob/master/images/Maven-life</a></p>
+<p>.png?raw=true)</p>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>处理</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>验证 validate</td>
+<td>验证项目</td>
+<td>验证项目是否正确且所有必须信息是可用的</td>
+</tr>
+<tr>
+<td>编译 compile</td>
+<td>执行编译</td>
+<td>源代码编译在此阶段完成</td>
+</tr>
+<tr>
+<td>测试 Test</td>
+<td>测试</td>
+<td>使用适当的单元测试框架（例如JUnit）运行测试。</td>
+</tr>
+<tr>
+<td>包装 package</td>
+<td>打包</td>
+<td>创建JAR/WAR包如在 pom.xml 中定义提及的包</td>
+</tr>
+<tr>
+<td>检查 verify</td>
+<td>检查</td>
+<td>对集成测试的结果进行检查，以保证质量达标</td>
+</tr>
+<tr>
+<td>安装 install</td>
+<td>安装</td>
+<td>安装打包的项目到本地仓库，以供其他项目使用</td>
+</tr>
+<tr>
+<td>部署 deploy</td>
+<td>部署</td>
+<td>拷贝最终的工程包到远程仓库中，以共享给其他开发人员和工程</td>
+</tr>
+</tbody>
+</table>
+<p>为了完成 default 生命周期，这些阶段（包括其他未在上面罗列的生命周期阶段）将被按顺序地执行。</p>
+<p>Maven 有以下三个标准的生命周期：</p>
+<ul>
+<li><strong>clean</strong>：项目清理的处理</li>
+<li><strong>default(或 build)</strong>：项目部署的处理</li>
+<li><strong>site</strong>：项目站点文档创建的处理</li>
+</ul>
+<h3 id="构建阶段由插件目标构成"><a href="#构建阶段由插件目标构成" class="headerlink" title="构建阶段由插件目标构成"></a>构建阶段由插件目标构成</h3><p>一个插件目标代表一个特定的任务（比构建阶段更为精细），这有助于项目的构建和管理。这些目标可能被绑定到多个阶段或者无绑定。不绑定到任何构建阶段的目标可以在构建生命周期之外通过直接调用执行。这些目标的执行顺序取决于调用目标和构建阶段的顺序。</p>
+<p>例如，考虑下面的命令：</p>
+<p>clean 和 pakage 是构建阶段，dependency:copy-dependencies 是目标</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn clean dependency:copy-dependencies package</span><br></pre></td></tr></table></figure>
+<p>这里的 clean 阶段将会被首先执行，然后 dependency:copy-dependencies 目标会被执行，最终 package 阶段被执行。</p>
+<hr>
+<h2 id="Clean-生命周期"><a href="#Clean-生命周期" class="headerlink" title="Clean 生命周期"></a>Clean 生命周期</h2><p>当我们执行 mvn post-clean 命令时，Maven 调用 clean 生命周期，它包含以下阶段：</p>
+<ul>
+<li>pre-clean：执行一些需要在clean之前完成的工作</li>
+<li>clean：移除所有上一次构建生成的文件</li>
+<li>post-clean：执行一些需要在clean之后立刻完成的工作</li>
+</ul>
+<p>mvn clean 中的 clean 就是上面的 clean，在一个生命周期中，运行某个阶段的时候，它之前的所有阶段都会被运行，也就是说，如果执行 mvn clean 将运行以下两个生命周期阶段：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pre-clean, clean</span><br></pre></td></tr></table></figure>
+<p>如果我们运行 mvn post-clean ，则运行以下三个生命周期阶段：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pre-clean, clean, post-clean</span><br></pre></td></tr></table></figure>
+<p>我们可以通过在上面的 clean 生命周期的任何阶段定义目标来修改这部分的操作行为。</p>
+<p>在下面的例子中，我们将 maven-antrun-plugin:run 目标添加到 pre-clean、clean 和 post-clean 阶段中。这样我们可以在 clean 生命周期的各个阶段显示文本信息。</p>
+<p>我们已经在 C:\MVN\project 目录下创建了一个 pom.xml 文件。</p>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://maven.apache.org/POM/4.0.0    http://maven.apache.org/xsd/maven-4.0.0.xsd"> <modelversion>4.0.0</modelversion> <groupid>com.companyname.projectgroup</groupid> <artifactid>project</artifactid> <version>1.0</version> <build> <plugins>    <plugin>    <groupid>org.apache.maven.plugins</groupid>    <artifactid>maven-antrun-plugin</artifactid>    <version>1.1</version>    <executions>       <execution>          <id>id.pre-clean</id>          <phase>pre-clean</phase>          <goals>             <goal>run</goal>          </goals>          <configuration>             <tasks>                <echo>pre-clean phase</echo>             </tasks>          </configuration>       </execution>       <execution>          <id>id.clean</id>          <phase>clean</phase>          <goals>           <goal>run</goal>          </goals>          <configuration>             <tasks>                <echo>clean phase</echo>             </tasks>          </configuration>       </execution>       <execution>          <id>id.post-clean</id>          <phase>post-clean</phase>          <goals>             <goal>run</goal>          </goals>          <configuration>             <tasks>                <echo>post-clean phase</echo>             </tasks>          </configuration>       </execution>    </executions>    </plugin> </plugins> </build> </project>
+
+<p>现在打开命令控制台，跳转到 pom.xml 所在目录，并执行下面的 mvn 命令。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\MVN\project&gt;mvn post-clean</span><br></pre></td></tr></table></figure>
+<p>Maven 将会开始处理并显示 clean 生命周期的所有阶段。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">[INFO] Scanning for projects...</span><br><span class="line">[INFO] ------------------------------------------------------------------</span><br><span class="line">[INFO] Building Unnamed - com.companyname.projectgroup:project:jar:1.0</span><br><span class="line">[INFO]    task-segment: [post-clean]</span><br><span class="line">[INFO] ------------------------------------------------------------------</span><br><span class="line">[INFO] [antrun:run &#123;execution: id.pre-clean&#125;]</span><br><span class="line">[INFO] Executing tasks</span><br><span class="line">     [echo] pre-clean phase</span><br><span class="line">[INFO] Executed tasks</span><br><span class="line">[INFO] [clean:clean &#123;execution: default-clean&#125;]</span><br><span class="line">[INFO] [antrun:run &#123;execution: id.clean&#125;]</span><br><span class="line">[INFO] Executing tasks</span><br><span class="line">     [echo] clean phase</span><br><span class="line">[INFO] Executed tasks</span><br><span class="line">[INFO] [antrun:run &#123;execution: id.post-clean&#125;]</span><br><span class="line">[INFO] Executing tasks</span><br><span class="line">     [echo] post-clean phase</span><br><span class="line">[INFO] Executed tasks</span><br><span class="line">[INFO] ------------------------------------------------------------------</span><br><span class="line">[INFO] BUILD SUCCESSFUL</span><br><span class="line">[INFO] ------------------------------------------------------------------</span><br><span class="line">[INFO] Total time: &lt; 1 second</span><br><span class="line">[INFO] Finished at: Sat Jul 07 13:38:59 IST 2012</span><br><span class="line">[INFO] Final Memory: 4M/44M</span><br><span class="line">[INFO] ------------------------------------------------------------------</span><br></pre></td></tr></table></figure>
+<p>你可以尝试修改 mvn clean 命令，来显示 pre-clean 和 clean，而在 post-clean 阶段不执行任何操作。</p>
+<hr>
+<h2 id="Default-Build-生命周期"><a href="#Default-Build-生命周期" class="headerlink" title="Default (Build) 生命周期"></a>Default (Build) 生命周期</h2><p>这是 Maven 的主要生命周期，被用于构建应用，包括下面的 23 个阶段：</p>
+<table>
+<thead>
+<tr>
+<th>生命周期阶段</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>validate</td>
+<td>检查工程配置是否正确，完成构建过程的所有必要信息是否能够获取到。</td>
+</tr>
+<tr>
+<td>initialize</td>
+<td>初始化构建状态，例如设置属性。</td>
+</tr>
+<tr>
+<td>generate-sources</td>
+<td>生成编译阶段需要包含的任何源码文件。</td>
+</tr>
+<tr>
+<td>process-sources</td>
+<td>处理源代码，例如，过滤任何值（filter any value）。</td>
+</tr>
+<tr>
+<td>generate-resources</td>
+<td>生成工程包中需要包含的资源文件。</td>
+</tr>
+<tr>
+<td>process-resources</td>
+<td>拷贝和处理资源文件到目的目录中，为打包阶段做准备。</td>
+</tr>
+<tr>
+<td>compile</td>
+<td>编译工程源码。</td>
+</tr>
+<tr>
+<td>process-classes</td>
+<td>处理编译生成的文件，例如 Java Class 字节码的加强和优化。</td>
+</tr>
+<tr>
+<td>generate-test-sources</td>
+<td>生成编译阶段需要包含的任何测试源代码。</td>
+</tr>
+<tr>
+<td>process-test-sources</td>
+<td>处理测试源代码，例如，过滤任何值（filter any values)。</td>
+</tr>
+<tr>
+<td>test-compile</td>
+<td>编译测试源代码到测试目的目录。</td>
+</tr>
+<tr>
+<td>process-test-classes</td>
+<td>处理测试代码文件编译后生成的文件。</td>
+</tr>
+<tr>
+<td>test</td>
+<td>使用适当的单元测试框架（例如JUnit）运行测试。</td>
+</tr>
+<tr>
+<td>prepare-package</td>
+<td>在真正打包之前，为准备打包执行任何必要的操作。</td>
+</tr>
+<tr>
+<td>package</td>
+<td>获取编译后的代码，并按照可发布的格式进行打包，例如 JAR、WAR 或者 EAR 文件。</td>
+</tr>
+<tr>
+<td>pre-integration-test</td>
+<td>在集成测试执行之前，执行所需的操作。例如，设置所需的环境变量。</td>
+</tr>
+<tr>
+<td>integration-test</td>
+<td>处理和部署必须的工程包到集成测试能够运行的环境中。</td>
+</tr>
+<tr>
+<td>post-integration-test</td>
+<td>在集成测试被执行后执行必要的操作。例如，清理环境。</td>
+</tr>
+<tr>
+<td>verify</td>
+<td>运行检查操作来验证工程包是有效的，并满足质量要求。</td>
+</tr>
+<tr>
+<td>install</td>
+<td>安装工程包到本地仓库中，该仓库可以作为本地其他工程的依赖。</td>
+</tr>
+<tr>
+<td>deploy</td>
+<td>拷贝最终的工程包到远程仓库中，以共享给其他开发人员和工程。</td>
+</tr>
+</tbody>
+</table>
+<p>有一些与 Maven 生命周期相关的重要概念需要说明：</p>
+<p>当一个阶段通过 Maven 命令调用时，例如 mvn compile，只有该阶段之前以及包括该阶段在内的所有阶段会被执行。</p>
+<p>不同的 maven 目标将根据打包的类型（JAR / WAR / EAR），被绑定到不同的 Maven 生命周期阶段。</p>
+<p>在下面的例子中，我们将 maven-antrun-plugin:run 目标添加到 Build 生命周期的一部分阶段中。这样我们可以显示生命周期的文本信息。</p>
+<p>我们已经更新了 C:\MVN\project 目录下的 pom.xml 文件。</p>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://maven.apache.org/POM/4.0.0   http://maven.apache.org/xsd/maven-4.0.0.xsd"> <modelversion>4.0.0</modelversion> <groupid>com.companyname.projectgroup</groupid> <artifactid>project</artifactid> <version>1.0</version> <build> <plugins> <plugin> <groupid>org.apache.maven.plugins</groupid> <artifactid>maven-antrun-plugin</artifactid> <version>1.1</version> <executions>    <execution>       <id>id.validate</id>       <phase>validate</phase>       <goals>          <goal>run</goal>       </goals>       <configuration>          <tasks>             <echo>validate phase</echo>          </tasks>       </configuration>    </execution>    <execution>       <id>id.compile</id>       <phase>compile</phase>       <goals>          <goal>run</goal>       </goals>       <configuration>          <tasks>             <echo>compile phase</echo>          </tasks>       </configuration>    </execution>    <execution>       <id>id.test</id>       <phase>test</phase>       <goals>          <goal>run</goal>       </goals>       <configuration>          <tasks>             <echo>test phase</echo>          </tasks>       </configuration>    </execution>    <execution>          <id>id.package</id>          <phase>package</phase>          <goals>             <goal>run</goal>          </goals>          <configuration>          <tasks>             <echo>package phase</echo>          </tasks>       </configuration>    </execution>    <execution>       <id>id.deploy</id>       <phase>deploy</phase>       <goals>          <goal>run</goal>       </goals>       <configuration>       <tasks>          <echo>deploy phase</echo>       </tasks>       </configuration>    </execution> </executions> </plugin> </plugins> </build> </project>
+
+<p>现在打开命令控制台，跳转到 pom.xml 所在目录，并执行以下 mvn 命令。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\MVN\project&gt;mvn compile</span><br></pre></td></tr></table></figure>
+<p>Maven 将会开始处理并显示直到编译阶段的构建生命周期的各个阶段。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">[INFO] Scanning for projects...</span><br><span class="line">[INFO] ------------------------------------------------------------------</span><br><span class="line">[INFO] Building Unnamed - com.companyname.projectgroup:project:jar:1.0</span><br><span class="line">[INFO]    task-segment: [compile]</span><br><span class="line">[INFO] ------------------------------------------------------------------</span><br><span class="line">[INFO] [antrun:run &#123;execution: id.validate&#125;]</span><br><span class="line">[INFO] Executing tasks</span><br><span class="line">     [echo] validate phase</span><br><span class="line">[INFO] Executed tasks</span><br><span class="line">[INFO] [resources:resources &#123;execution: default-resources&#125;]</span><br><span class="line">[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources,</span><br><span class="line">i.e. build is platform dependent!</span><br><span class="line">[INFO] skip non existing resourceDirectory C:\MVN\project\src\main\resources</span><br><span class="line">[INFO] [compiler:compile &#123;execution: default-compile&#125;]</span><br><span class="line">[INFO] Nothing to compile - all classes are up to date</span><br><span class="line">[INFO] [antrun:run &#123;execution: id.compile&#125;]</span><br><span class="line">[INFO] Executing tasks</span><br><span class="line">     [echo] compile phase</span><br><span class="line">[INFO] Executed tasks</span><br><span class="line">[INFO] ------------------------------------------------------------------</span><br><span class="line">[INFO] BUILD SUCCESSFUL</span><br><span class="line">[INFO] ------------------------------------------------------------------</span><br><span class="line">[INFO] Total time: 2 seconds</span><br><span class="line">[INFO] Finished at: Sat Jul 07 20:18:25 IST 2012</span><br><span class="line">[INFO] Final Memory: 7M/64M</span><br><span class="line">[INFO] ------------------------------------------------------------------</span><br></pre></td></tr></table></figure>
+<h3 id="命令行调用"><a href="#命令行调用" class="headerlink" title="命令行调用"></a>命令行调用</h3><p>在开发环境中，使用下面的命令去构建、安装工程到本地仓库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn install</span><br></pre></td></tr></table></figure>
+<p>这个命令在执行 install 阶段前，按顺序执行了 default 生命周期的阶段 （validate，compile，package，等等），我们只需要调用最后一个阶段，如这里是 install。</p>
+<p>在构建环境中，使用下面的调用来纯净地构建和部署项目到共享仓库中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn clean deploy</span><br></pre></td></tr></table></figure>
+<p>这行命令也可以用于多模块的情况下，即包含多个子项目的项目，Maven 会在每一个子项目执行 clean 命令，然后再执行 deploy 命令。</p>
+<hr>
+<h2 id="Site-生命周期"><a href="#Site-生命周期" class="headerlink" title="Site 生命周期"></a>Site 生命周期</h2><p>Maven Site 插件一般用来创建新的报告文档、部署站点等。</p>
+<ul>
+<li>pre-site：执行一些需要在生成站点文档之前完成的工作</li>
+<li>site：生成项目的站点文档</li>
+<li>post-site： 执行一些需要在生成站点文档之后完成的工作，并且为部署做准备</li>
+<li>site-deploy：将生成的站点文档部署到特定的服务器上</li>
+</ul>
+<p>这里经常用到的是site阶段和site-deploy阶段，用以生成和发布Maven站点，这可是Maven相当强大的功能，Manager比较喜欢，文档及统计数据自动生成，很好看。 在下面的例子中，我们将 maven-antrun-plugin:run 目标添加到 Site 生命周期的所有阶段中。这样我们可以显示生命周期的所有文本信息。</p>
+<p>我们已经更新了 C:\MVN\project 目录下的 pom.xml 文件。</p>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://maven.apache.org/POM/4.0.0   http://maven.apache.org/xsd/maven-4.0.0.xsd"> <modelversion>4.0.0</modelversion> <groupid>com.companyname.projectgroup</groupid> <artifactid>project</artifactid> <version>1.0</version> <build> <plugins> <plugin> <groupid>org.apache.maven.plugins</groupid> <artifactid>maven-antrun-plugin</artifactid> <version>1.1</version>    <executions>       <execution>          <id>id.pre-site</id>          <phase>pre-site</phase>          <goals>             <goal>run</goal>          </goals>          <configuration>             <tasks>                <echo>pre-site phase</echo>             </tasks>          </configuration>       </execution>       <execution>          <id>id.site</id>          <phase>site</phase>          <goals>          <goal>run</goal>          </goals>          <configuration>             <tasks>                <echo>site phase</echo>             </tasks>          </configuration>       </execution>       <execution>          <id>id.post-site</id>          <phase>post-site</phase>          <goals>             <goal>run</goal>          </goals>          <configuration>             <tasks>                <echo>post-site phase</echo>             </tasks>          </configuration>       </execution>       <execution>          <id>id.site-deploy</id>          <phase>site-deploy</phase>          <goals>             <goal>run</goal>          </goals>          <configuration>             <tasks>                <echo>site-deploy phase</echo>             </tasks>          </configuration>       </execution>    </executions> </plugin> </plugins> </build> </project>
+
+<p>现在打开命令控制台，跳转到 pom.xml 所在目录，并执行以下 mvn 命令。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\MVN\project&gt;mvn site</span><br></pre></td></tr></table></figure>
+<p>Maven 将会开始处理并显示直到 site 阶段的 site 生命周期的各个阶段。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">[INFO] Scanning for projects...</span><br><span class="line">[INFO] ------------------------------------------------------------------</span><br><span class="line">[INFO] Building Unnamed - com.companyname.projectgroup:project:jar:1.0</span><br><span class="line">[INFO]    task-segment: [site]</span><br><span class="line">[INFO] ------------------------------------------------------------------</span><br><span class="line">[INFO] [antrun:run &#123;execution: id.pre-site&#125;]</span><br><span class="line">[INFO] Executing tasks</span><br><span class="line">     [echo] pre-site phase</span><br><span class="line">[INFO] Executed tasks</span><br><span class="line">[INFO] [site:site &#123;execution: default-site&#125;]</span><br><span class="line">[INFO] Generating &quot;About&quot; report.</span><br><span class="line">[INFO] Generating &quot;Issue Tracking&quot; report.</span><br><span class="line">[INFO] Generating &quot;Project Team&quot; report.</span><br><span class="line">[INFO] Generating &quot;Dependencies&quot; report.</span><br><span class="line">[INFO] Generating &quot;Project Plugins&quot; report.</span><br><span class="line">[INFO] Generating &quot;Continuous Integration&quot; report.</span><br><span class="line">[INFO] Generating &quot;Source Repository&quot; report.</span><br><span class="line">[INFO] Generating &quot;Project License&quot; report.</span><br><span class="line">[INFO] Generating &quot;Mailing Lists&quot; report.</span><br><span class="line">[INFO] Generating &quot;Plugin Management&quot; report.</span><br><span class="line">[INFO] Generating &quot;Project Summary&quot; report.</span><br><span class="line">[INFO] [antrun:run &#123;execution: id.site&#125;]</span><br><span class="line">[INFO] Executing tasks</span><br><span class="line">     [echo] site phase</span><br><span class="line">[INFO] Executed tasks</span><br><span class="line">[INFO] ------------------------------------------------------------------</span><br><span class="line">[INFO] BUILD SUCCESSFUL</span><br><span class="line">[INFO] ------------------------------------------------------------------</span><br><span class="line">[INFO] Total time: 3 seconds</span><br><span class="line">[INFO] Finished at: Sat Jul 07 15:25:10 IST 2012</span><br><span class="line">[INFO] Final Memory: 24M/149M</span><br><span class="line">[INFO] ------------------------------------------------------------------</span><br></pre></td></tr></table></figure>
+<p><code>`</code></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Donate comment here</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpeg" alt="麦口 WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpeg" alt="麦口 Alipay">
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Maven/" rel="tag"># Maven</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/24/GIT-cheat-sheet/" rel="next" title="GIT cheat-sheet">
+                <i class="fa fa-chevron-left"></i> GIT cheat-sheet
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+
+      
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+    <div id="container_gitment"></div>
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    <script>
+      var gitment = new Gitment({
+        id: 'Maven-构建生命周期',
+        owner: 'bmwu',
+        repo: 'bmwu.github.io',
+        oauth: {
+          client_id: '8809bf9a0be35d52044c',
+          client_secret: '7c6213a6c456fb4a87fc4817597febf55ca0aba8',
+        }
+      });
+      gitment.render('container_gitment');
+    </script>
+
+
+
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.jpeg" alt="麦口">
+          <p class="site-author-name" itemprop="name">麦口</p>
+           
+              <p class="site-description motion-element" itemprop="description">初心易得, 始终难守</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">40</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/bmwu" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      Github
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://telegram.me/maikou/" target="_blank" title="Telegram">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      Telegram
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zuoyanyouwu.com/" title="左言右午的日常" target="_blank">左言右午的日常</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://attitude.mixjuice.me/" title="Mixjuice's Notes" target="_blank">Mixjuice's Notes</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Maven-构建生命周期"><span class="nav-number">1.</span> <span class="nav-text">Maven 构建生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#构建阶段由插件目标构成"><span class="nav-number">1.0.1.</span> <span class="nav-text">构建阶段由插件目标构成</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Clean-生命周期"><span class="nav-number">1.1.</span> <span class="nav-text">Clean 生命周期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Default-Build-生命周期"><span class="nav-number">1.2.</span> <span class="nav-text">Default (Build) 生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令行调用"><span class="nav-number">1.2.1.</span> <span class="nav-text">命令行调用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Site-生命周期"><span class="nav-number">1.3.</span> <span class="nav-text">Site 生命周期</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">麦口</span>
+
+  
+</div>
+
+<div class="copyright">
+  <span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+  </span>
+
+  <span class="post-meta-divider">|</span>
+
+  <span id="busuanzi_container_site_uv">
+    本站访客数<span id="busuanzi_value_site_uv"></span>人次
+  </span>
+</div>
+
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("c8Jyjv781bYF275ylRgq2bJh-gzGzoHsz", "geyARv9AbY0qrM1UIKyFkP1W");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
