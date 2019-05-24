@@ -10,9 +10,7 @@ Maven 构建生命周期定义了一个项目构建跟发布的过程。
 
 一个典型的 Maven 构建（build）生命周期是由以下几个阶段的序列组成的：
 
-![image](https://github.com/bmwu/bmwu.github.io/blob/master/images/Maven-life
-
-.png?raw=true)
+![image](https://github.com/bmwu/bmwu.github.io/blob/master/images/Maven-life.png?raw=true)
 
 | 阶段          | 处理     | 描述                                                     |
 | ------------- | -------- | -------------------------------------------------------- |
